@@ -1,0 +1,5 @@
+>>> x = np.linspace(0, tau, 100)
+>>> fig, (ax1, ax2) = plt.subplots(2)
+>>> fig.suptitle(r"Vertically stacked plots of $\cos\theta$ and $\sin\theta$.")
+>>> ax1.plot(x, np.cos(x))
+>>> ax2.plot(x, np.sin(x))

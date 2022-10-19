@@ -1,0 +1,45 @@
+import os
+from flask import Flask, render_template, request
+from palindrome.phrase import Phrase
+
+def create_app(test_config=None):
+    """Create and configure the app."""
+    app = Flask(__name__, instance_relative_config=True)
+
+    if test_config is None:
+        # Load the instance config, if it exists, when not testing.
+        app.config.from_pyfile("config.py", silent=True)
+    else:
+        # Load the test config if passed in.
+        app.config.from_mapping(test_config)
+
+    # Ensure the instance folder exists.
+    try:
+        os.makedirs(app.instance_path)
+    except OSError:
+        pass
+
+    @app.route("/")
+    def index():
+        page_title = "Home"
+        return render_template("index.html", page_title=page_title)
+
+    @app.route("/about")
+    def about():
+        page_title = "About"
+        return render_template("about.html", page_title=page_title)
+
+    @app.route("/palindrome")
+    def palindrome():
+        page_title = "Palindrome Detector"
+        return render_template("palindrome.html", page_title=page_title)
+
+    @app.route("/check", methods=("POST",))
+    def check():
+        return render_template("result.html",
+                               Phrase=Phrase,
+                               phrase=request.form["phrase"])
+
+    return app
+
+app = create_app()

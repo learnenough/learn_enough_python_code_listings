@@ -1,0 +1,5 @@
+>>> print('hello\tgoodbye')
+>>> print('hello\ngoodbye')
+>>> print("hello\tgoodbye")
+>>> print("hello\ngoodbye")
+>>> print(r"hello\ngoodbye")

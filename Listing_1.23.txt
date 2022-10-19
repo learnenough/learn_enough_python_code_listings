@@ -1,0 +1,15 @@
+(venv) $ flyctl status    # Details will vary
+App
+  Name     = restless-sun-9514
+  Owner    = personal
+  Version  = 2
+  Status   = running
+  Hostname = crimson-shadow-1161.fly.dev   # Your URL will differ.
+  Platform = nomad
+
+Deployment Status
+  ID          = 051e253a-e322-4b2c-96ec-bc2758763328
+  Version     = v2
+  Status      = successful
+  Description = Deployment completed successfully
+  Instances   = 1 desired, 1 placed, 1 healthy, 0 unhealthy

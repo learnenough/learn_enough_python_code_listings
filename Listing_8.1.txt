@@ -1,0 +1,11 @@
+python_package_tutorial/
+├── LICENSE
+├── pyproject.toml
+├── README.md
+├── setup.cfg
+├── src/
+│   └── palindrome/
+│       ├── __init__.py
+│       └── phrase.py
+└── tests/
+    └── test_phrase.py

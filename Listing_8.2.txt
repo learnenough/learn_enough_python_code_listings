@@ -1,0 +1,9 @@
+$ cd ~/repos    # Use ~/environment/repos on Cloud9
+$ mkdir python_package_tutorial
+$ cd python_package_tutorial
+$ touch LICENSE pyproject.toml README.md setup.cfg
+$ mkdir -p src/palindrome
+$ touch src/palindrome/__init__.py
+$ touch src/palindrome/phrase.py
+$ mkdir tests
+$ touch tests/test_phrase.py
