@@ -1,7 +1,0 @@
-(venv) $ pytest
-============================= test session starts ==============================
-collected 3 items
-
-tests/test_site_pages.py ...                                             [100%]
-
-============================== 3 passed in 0.01s ===============================

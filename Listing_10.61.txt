@@ -1,2 +1,0 @@
-(venv) $ pip install --upgrade your-package \
-> --index-url https://test.pypi.org/simple/

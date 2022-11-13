@@ -1,7 +1,0 @@
-(venv) $ pytest
-============================= test session starts ==============================
-collected 4 items
-
-tests/test_phrase.py ..ss                                            [100%]
-
-========================= 2 passed, 2 skipped in 0.00s =========================
