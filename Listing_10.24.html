@@ -1,7 +1,21 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <h1>Palindrome Detector</h1>
+  <h1>Sample Flask App</h1>
 
-  <p>This will be the palindrome detector.</p>
+  <p>
+    This is the sample Flask app for
+    <a href="https://www.learnenough.com/python-tutorial"><em>Learn Enough Python
+    to Be Dangerous</em></a>. Learn more on the <a href="/about">About</a> page.
+  </p>
+
+  <p>
+    Click the <a href="https://en.wikipedia.org/wiki/Sator_Square">Sator
+    Square</a> below to run the custom <a href="/palindrome">Palindrome
+    Detector</a>.
+  </p>
+
+  <a class="sator-square" href="/palindrome">
+    <img src="/static/images/sator_square.jpg" alt="Sator Square">
+  </a>
 {% endblock %}

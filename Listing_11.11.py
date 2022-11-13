@@ -1,9 +1,7 @@
-
->>> nobel.head()
-   id       firstname  ...       city          country
-0   1  Wilhelm Conrad  ...     Munich          Germany
-1   2      Hendrik A.  ...     Leiden  the Netherlands
-2   3          Pieter  ...  Amsterdam  the Netherlands
-3   4           Henri  ...      Paris           France
-4   5          Pierre  ...      Paris           France
-[5 rows x 20 columns]
+>>> sizes = {"tiny": 4, "small": 8, "mid": 12, "big": 16, "huge": 24}
+>>> df["Size"].map(sizes)
+0     4
+1     8
+2    12
+3    16
+4    24

@@ -1,6 +1,8 @@
->>> def foo(*args, **kwargs):
-...     print(args)
-...     print(kwargs)
+>>> def bigger_than_10(numbers):
+...     for n in numbers:
+...         if n > 10:
+...             return n
+...     return None
 ...
->>> foo("This", "is a bunch", "of arguments", "to the function",
-...     a="hello", b="world", bar="good day!")
+>>> bigger_than_10(squares_list(11))
+16

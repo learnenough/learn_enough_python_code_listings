@@ -1,5 +1,3 @@
->>> for paragraph_tag in doc("p"):
-...     print(paragraph_tag.text)
-...
-lorem
-ipsum
+>>> from bs4 import BeautifulSoup
+>>> html = '<p>lorem<sup class="reference">1</sup></p><p>ipsum</p>'
+>>> doc = BeautifulSoup(html)

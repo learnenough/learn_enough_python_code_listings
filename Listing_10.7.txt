@@ -1,1 +1,1 @@
-(venv) $ flyctl launch
+(venv) $ flyctl auth login --interactive

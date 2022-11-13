@@ -1,4 +1,4 @@
-class Phrase(str):
+class Phrase:
     """A class to represent phrases."""
 
     def __init__(self, content):

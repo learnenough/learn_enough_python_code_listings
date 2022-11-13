@@ -1,17 +1,16 @@
-class Phrase:
-    """A class to represent phrases."""
+from pytest import skip
 
-    def __init__(self, content):
-        self.content = content
+from palindrome_mhartl.phrase import Phrase
 
-    def processed_content(self):
-        """Process the content for palindrome testing."""
-        return self.content#.lower()
 
-    def ispalindrome(self):
-        """Return True for a palindrome, False otherwise."""
-        return self.processed_content() == reverse(self.processed_content())
+def test_non_palindrome():
+    assert not Phrase("apple").ispalindrome()
 
-def reverse(string):
-    """Reverse a string."""
-    return "".join(reversed(string))
+def test_literal_palindrome():
+    assert Phrase("racecar").ispalindrome()
+
+def test_mixed_case_palindrome():
+    assert Phrase("RaceCar").ispalindrome()
+
+def test_palindrome_with_punctuation():
+    assert Phrase("Madam, I'm Adam.").ispalindrome()

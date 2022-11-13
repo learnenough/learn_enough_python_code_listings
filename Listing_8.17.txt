@@ -1,0 +1,20 @@
+(venv) $ pytest
+============================= test session starts ==============================
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_phrase.py ___________________
+ImportError while importing test module
+'/Users/mhartl/repos/python_package_tutorial/tests/test_phrase.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_phrase.py:1: in <module>
+    from palindrome_mhartl.phrase import Phrase
+E   ImportError: cannot import name 'Phrase' from 'palindrome.palindrome'
+(/Users/mhartl/repos/python_package_tutorial/src/palindrome/phrase.py)
+=========================== short test summary info ============================
+ERROR tests/test_phrase.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.03s ===============================

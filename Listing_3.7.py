@@ -1,7 +1,5 @@
->>> for e in a:    # Pythonic
-...     print(e)
-...
-ant
-bat
-cat
-42
+>>> a1 = ["a", "b", "c"]
+>>> a2 = [1, 2, 3]
+>>> FILL_IN
+>>> a1
+['a', 'b', 'c', 1, 2, 3]

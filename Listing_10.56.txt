@@ -2,7 +2,15 @@
 ============================= test session starts ==============================
 collected 6 items
 
-tests/test_palindrome.py ...                                             [ 50%]
+tests/test_palindrome.py .FF                                             [ 50%]
 tests/test_site_pages.py ...                                             [100%]
 
-============================== 6 passed in 0.03s ===============================
+=================================== FAILURES ===================================
+________________________ test_non_palindrome_submission ________________________
+.
+.
+.
+=========================== short test summary info ============================
+FAILED tests/test_palindrome.py::test_non_palindrome_submission - assert '<fo...
+FAILED tests/test_palindrome.py::test_palindrome_submission - assert '<form i...
+========================= 2 failed, 4 passed in 0.04s ==========================

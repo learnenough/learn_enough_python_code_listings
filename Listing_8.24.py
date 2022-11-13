@@ -1,14 +1,17 @@
-from palindrome.phrase import Phrase
-from pytest import skip
+class Phrase:
+    """A class to represent phrases."""
 
-def test_non_palindrome():
-    assert not Phrase("apple").ispalindrome()
+    def __init__(self, content):
+        self.content = content
 
-def test_literal_palindrome():
-    assert Phrase("racecar").ispalindrome()
+    def processed_content(self):
+        """Process the content for palindrome testing."""
+        return self.content#.lower()
 
-def test_mixed_case_palindrome():
-    FILL_IN
+    def ispalindrome(self):
+        """Return True for a palindrome, False otherwise."""
+        return self.processed_content() == reverse(self.processed_content())
 
-def test_palindrome_with_punctuation():
-    skip()
+def reverse(string):
+    """Reverse a string."""
+    return "".join(reversed(string))

@@ -1,0 +1,7 @@
+--extra-index-url https://testpypi.python.org/pypi
+palindrome_mhartl==0.0.12
+click==8.1.3
+Flask==2.2.2
+.
+.
+.

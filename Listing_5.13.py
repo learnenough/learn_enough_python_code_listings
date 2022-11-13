@@ -1,7 +1,10 @@
-def reverse(string):
-    """Reverse a string."""
-    return "".join(reversed(string))
+import calendar
 
-def ispalindrome(string):
-    """Return True for a palindrome, False otherwise."""
-    return string == reverse(string)
+
+def dayname(time):
+  """Return the name of the day of the week for the given time."""
+  return calendar.day_name[time.weekday()]
+
+def greeting(time):
+  """Return a friendly greeting based on the current time."""
+  return FILL_IN

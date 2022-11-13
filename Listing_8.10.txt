@@ -1,0 +1,17 @@
+(venv) $ pytest
+============================= test session starts ==============================
+collected 1 item
+
+tests/palindrome_test.py F                                        [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_non_palindrome ______________________________
+
+    def test_non_palindrome():
+>       assert False
+E       assert False
+
+tests/palindrome_test.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED tests/palindrome_test.py::test_non_palindrome - assert False
+============================== 1 failed in 0.01s ===============================

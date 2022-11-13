@@ -1,8 +1,8 @@
->>> for i in range(5):
-...     print(i)
-...
-0
-1
-2
-3
-4
+>>> soliloquy   # Just a reminder of what the string is
+'To be, or not to be, that is the question:'
+>>> soliloquy[0]
+'T'
+>>> soliloquy[1]
+'o'
+>>> soliloquy[2]
+' '

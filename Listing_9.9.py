@@ -1,8 +1,20 @@
-#!/usr/bin/env python
-import requests
-from palindrome.phrase import Phrase
+#!/usr/bin/env python3
+from palindrome_mhartl.phrase import Phrase
 
-url = "https://cdn.learnenough.com/phrases.txt"
-for line in requests.get(url).text.splitlines():
-    if Phrase(line).ispalindrome():
-        print(f"palindrome detected: {line}")
+
+def main():
+    detect_palindromes()
+
+def detect_palindromes():
+    with open("phrases.txt") as file:
+        palindromes = [line for line in file.readlines()
+                       if Phrase(line).ispalindrome()]
+
+    palindrome_content = "".join(palindromes)
+    print(palindrome_content, end="")
+
+    with open("palindromes_file.txt", "w") as file:
+        file.write(palindrome_content)
+
+if __name__ == "__main__":
+    main()

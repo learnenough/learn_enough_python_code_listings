@@ -2,9 +2,8 @@ python_package_tutorial/
 ├── LICENSE
 ├── pyproject.toml
 ├── README.md
-├── setup.cfg
 ├── src/
-│   └── palindrome/
+│   └── palindrome_YOUR_USERNAME_HERE/
 │       ├── __init__.py
 │       └── phrase.py
 └── tests/

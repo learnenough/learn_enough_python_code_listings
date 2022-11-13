@@ -1,6 +1,6 @@
 >>> if len(x) != 0:          # Not quite Pythonic
-...     "x is not empty."
+...     print("x is not empty.")
 ... else:
-...     "x is empty."
+...     print("x is empty.")
 ...
-'x is not empty'
+x is not empty

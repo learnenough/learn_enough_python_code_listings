@@ -1,7 +1,12 @@
-def reverse(string):
-    """Reverse a string."""
-    return "".join(reversed(string))
+from datetime import datetime
 
-def ispalindrome(string):
-    """Return True for a palindrome, False otherwise."""
-    return string.lower() == reverse(string.lower())
+from flask import Flask
+
+from python_tutorial.day import dayname
+
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return greeting(datetime.now())

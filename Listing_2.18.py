@@ -1,6 +1,6 @@
 >>> if x:                    # Pythonic
-...     "x is not empty."
+...     print("x is not empty.")
 ... else:
-...     "x is empty."
+...     print("x is empty.")
 ...
-'x is not empty'
+x is not empty.

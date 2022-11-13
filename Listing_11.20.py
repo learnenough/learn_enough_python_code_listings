@@ -1,5 +1,4 @@
-from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import GaussianNB
-from sklearn.linear_model import Perceptron
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+male_passengers = titanic[titanic["Sex"] == "male"]
+female_passengers = titanic[titanic["Sex"] == "female"]
+valid_male_ages = male_passengers[titanic["Age"].notna()]
+valid_female_ages = female_passengers[titanic["Age"].notna()]

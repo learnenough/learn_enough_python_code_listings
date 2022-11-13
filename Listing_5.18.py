@@ -1,5 +1,8 @@
->>> def squares_generator():
-...     for n in range(10**8 + 1):
-...         yield n**2
-...
->>> squares = squares_generator()
+def reverse(string):
+    """Reverse a string."""
+    return "".join(reversed(string))
+
+def ispalindrome(string):
+    """Return True for a palindrome, False otherwise."""
+    processed_content = string.lower()
+    return processed_content == reverse(processed_content)

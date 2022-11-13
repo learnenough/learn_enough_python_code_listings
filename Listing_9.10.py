@@ -1,3 +1,11 @@
->>> from bs4 import BeautifulSoup
->>> html = '<p>lorem<sup class="reference">1</sup></p><p>ipsum</p>'
->>> doc = BeautifulSoup(html)
+#!/usr/bin/env python3
+import requests
+
+from palindrome_mhartl.phrase import Phrase
+
+URL = "https://cdn.learnenough.com/phrases.txt"
+
+
+for line in requests.get(URL).text.splitlines():
+    if Phrase(line).ispalindrome():
+        print(f"palindrome detected: {line}")

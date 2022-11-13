@@ -1,6 +1,8 @@
->>> def deriver(f, x):
-...     h = 0.00001
-...     return (f(x+h) - f(x))/h
+>>> def squares_list(n):
+...     squares = []
+...     for i in range(n+1):
+...         squares.append(i**2)
+...     return squares
 ...
->>> deriver(square, 3)
-6.000009999951316
+>>> squares_list(11)
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]

@@ -1,9 +1,9 @@
 >>> password = "goldilocks"
 >>> if len(password) < 6:
-...     "Password is too short."
+...     print("Password is too short.")
 ... elif len(password) < 50:
-...     "Password is just right!"
+...     print("Password is just right!")
 ... else:
-...     "Password is too long."
+...     print("Password is too long.")
 ...
-'Password is just right!'
+Password is just right!

@@ -1,16 +1,46 @@
-def test_palindrome_page(client):
-    response = client.get("/palindrome")
-    assert form_tag() in response.text
+import os
 
-def test_non_palindrome_submission(client):
-    phrase = "Not a palindrome."
-    response = client.post("/check", data={"phrase": phrase})
-    assert f'<p>"{phrase}" isn\'t a palindrome.</p>' in response.text
+from flask import Flask, render_template, request
 
-def test_palindrome_submission(client):
-    phrase = "Sator Arepo tenet opera rotas"
-    response = client.post("/check", data={"phrase": phrase})
-    assert f'<p>"{phrase}" is a palindrome!</p>' in response.text
+from palindrome_mhartl.phrase import Phrase
 
-def form_tag():
-    return '<form id="palindrome_tester" action="/check" method="post">'
+
+def create_app(test_config=None):
+    """Create and configure the app."""
+    app = Flask(__name__, instance_relative_config=True)
+
+    if test_config is None:
+        # Load the instance config, if it exists, when not testing.
+        app.config.from_pyfile("config.py", silent=True)
+    else:
+        # Load the test config if passed in.
+        app.config.from_mapping(test_config)
+
+    # Ensure the instance folder exists.
+    try:
+        os.makedirs(app.instance_path)
+    except OSError:
+        pass
+
+    @app.route("/")
+    def index():
+        return render_template("index.html", page_title="Home")
+
+    @app.route("/about")
+    def about():
+        return render_template("about.html", page_title="About")
+
+    @app.route("/palindrome")
+    def palindrome():
+        return render_template("palindrome.html",
+                               page_title="Palindrome Detector")
+
+    @app.route("/check", methods=("POST",))
+    def check():
+        return render_template("result.html",
+                               Phrase=Phrase,
+                               phrase=request.form["phrase"])
+
+    return app
+
+app = create_app()

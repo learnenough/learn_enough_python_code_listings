@@ -1,8 +1,7 @@
->>> laureates = nobel.groupby(["id", "firstname", "surname"])
->>> sizes = laureates.size()
->>> sizes[sizes > 1]
-id   firstname  surname
-6    Marie      Curie      2
-66   John       Bardeen    2
-217  Linus      Pauling    2
-222  Frederick  Sanger     2
+>>> curies = nobel.loc[nobel["surname"].str.contains("Curie", na=False)]
+>>> curies
+      id firstname  ...   city country
+4      5    Pierre  ...  Paris  France
+5      6     Marie  ...    NaN     NaN
+6      6     Marie  ...  Paris  France
+191  194     Irène  ...  Paris  France

@@ -1,7 +1,7 @@
 states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
 
 def urlify(string):
-    """Returns a URL-friendly version of a string.
+    """Return a URL-friendly version of a string.
 
     Example: "North Dakota" -> "north-dakota"
     """

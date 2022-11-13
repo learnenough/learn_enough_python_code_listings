@@ -9,3 +9,9 @@ def imperative_lengths(states):
     return lengths
 
 print(imperative_lengths(states))
+
+# lengths: Functional version
+def functional_lengths(states):
+    return {state: len(state) for state in states}
+
+print(functional_lengths(states))

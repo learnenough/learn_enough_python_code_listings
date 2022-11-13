@@ -1,1 +1,2 @@
->>> from sklearn.linear_model import LinearRegression
+titanic[(titanic["Sex"] == "female") &
+        (titanic["Pclass"] == 3)]["Survived"].mean()

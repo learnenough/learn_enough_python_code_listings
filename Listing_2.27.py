@@ -1,13 +1,16 @@
->>> for i in range(len(soliloquy)):    # Not Pythonic
-...     print(f"Character {i+1} is '{soliloquy[i]}'")
+>>> for c in soliloquy:    # Pythonic
+...     print(c)
 ...
-Character 1 is 'T'
-Character 2 is 'o'
-Character 3 is ' '
-Character 4 is 'b'
-Character 5 is 'e'
-Character 6 is ','
-Character 7 is ' '
+T
+o
+
+b
+e
 .
 .
 .
+t
+i
+o
+n
+:

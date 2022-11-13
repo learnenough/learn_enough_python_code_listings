@@ -1,5 +1,5 @@
 class Phrase:
-    """A class for phrases."""
+    """A class to represent phrases."""
 
     def __init__(self, content):
         self.content = content

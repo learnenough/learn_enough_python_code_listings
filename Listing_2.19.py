@@ -1,6 +1,6 @@
->>> if x or y
-...     "At least one of the strings is nonempty."
-... else
-...     "Both strings are empty!"
+>>> if x or y:
+...     print("At least one of the strings is nonempty.")
+... else:
+...     print("Both strings are empty!")
 ...
-'At least one of the strings is nonempty.'
+At least one of the strings is nonempty.

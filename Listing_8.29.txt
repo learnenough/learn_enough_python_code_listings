@@ -1,0 +1,24 @@
+(venv) $ pytest
+============================= test session starts ==============================
+collected 5 items
+
+tests/test_phrase.py ...FF                                           [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_palindrome_with_punctuation _______________________
+
+    def test_palindrome_with_punctuation():
+>       assert Phrase("Madam, I'm Adam.").ispalindrome()
+E       assert False
+
+tests/test_phrase.py:14: AssertionError
+_________________________________ test_letters _________________________________
+
+    def test_letters():
+>       assert Phrase("Madam, I'm Adam.").letters() == "MadamImAdam"
+E       assert None == 'MadamImAdam'
+tests/test_phrase.py:17: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_phrase.py::test_palindrome_with_punctuation - assert False
+FAILED tests/test_phrase.py::test_letters - assert None == 'MadamImAdam'
+========================= 2 failed, 3 passed in 0.01s ==========================

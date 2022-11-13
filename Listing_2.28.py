@@ -1,5 +1,5 @@
->>> for i, c in enumerate(soliloquy):    # Pythonic
-...     print(f"Character {i+1} is '{c}'")
+>>> for i in range(len(soliloquy)):    # Not Pythonic
+...     print(f"Character {i+1} is '{soliloquy[i]}'")
 ...
 Character 1 is 'T'
 Character 2 is 'o'

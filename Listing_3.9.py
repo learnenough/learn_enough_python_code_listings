@@ -1,4 +1,7 @@
->>> for i, e in enumerate(a):
-...     print(f"a[{i}] = {repr(e)}")
+>>> for e in a:    # Pythonic
+...     print(e)
 ...
-???
+ant
+bat
+cat
+42

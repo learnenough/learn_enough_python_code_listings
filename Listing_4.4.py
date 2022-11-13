@@ -1,9 +1,12 @@
-from flask import Flask
 from datetime import datetime
 
-app = Flask(__name__)
+from flask import Flask
+
 DAYNAMES = ["Monday", "Tuesday", "Wednesday",
             "Thursday", "Friday", "Saturday", "Sunday"]
+
+
+app = Flask(__name__)
 
 @app.route("/")
 def hello_world():

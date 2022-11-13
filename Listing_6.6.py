@@ -1,5 +1,11 @@
->>> def has_all_digits(numbers):
-...     for n in numbers:
-...         if set(str(n)) == set("0123456789"):
-...             return n
-...     return None
+.
+.
+.
+# lengths: Imperative version
+def imperative_lengths(states):
+    lengths = {}
+    for state in states:
+        lengths[state] = len(state)
+    return lengths
+
+print(imperative_lengths(states))

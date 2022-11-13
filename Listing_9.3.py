@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-from palindrome.phrase import Phrase
+#!/usr/bin/env python3
+from palindrome_mhartl.phrase import Phrase
+
 
 with open("phrases.txt") as file:
     text = file.read()

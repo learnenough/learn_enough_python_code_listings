@@ -1,0 +1,16 @@
+(venv) $ pytest
+============================= test session starts ==============================
+collected 3 items
+
+tests/test_site_pages.py FFF                                             [100%]
+
+=================================== FAILURES ===================================
+__________________________________ test_index __________________________________
+.
+.
+.
+=========================== short test summary info ============================
+FAILED tests/test_site_pages.py::test_index - assert '<title>Learn Enough Pyt...
+FAILED tests/test_site_pages.py::test_about - assert '<title>Learn Enough Pyt...
+FAILED tests/test_site_pages.py::test_palindrome - assert '<title>Learn Enoug...
+============================== 3 failed in 0.03s ===============================

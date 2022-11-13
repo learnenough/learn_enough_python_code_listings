@@ -1,2 +1,2 @@
-titanic[(titanic["Sex"] == "female") &
-        (titanic["Pclass"] == 3)]["Survived"].mean()
+>>> URL = "https://learnenough.s3.amazonaws.com/titanic.csv"
+>>> titanic = pd.read_csv(URL)

@@ -1,8 +1,10 @@
->>> a = ["ant", "bat", "cat", "42"]
-['ant', 'bat', 'cat', '42']
->>> "".join(a)                         # Join on empty space.
-'antbatcat42'
->>> ", ".join(a)                       # Join on comma-space.
-'ant, bat, cat, 42'
->>> " -- ".join(a)                     # Join on double dashes.
-'ant -- bat -- cat -- 42'
+>>> soliloquy = "To be, or not to be, that is the question:"
+>>> a = ["badger", 42, "To be" in soliloquy]
+>>> a
+['badger', 42, True]
+>>> a[2]
+True
+>>> a[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range

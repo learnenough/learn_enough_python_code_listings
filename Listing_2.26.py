@@ -1,5 +1,5 @@
->>> for c in soliloquy:    # Pythonic
-...     print(c)
+>>> for i in range(len(soliloquy)):    # Not Pythonic
+...     print(soliloquy[i])
 ...
 T
 o

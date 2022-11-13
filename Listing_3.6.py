@@ -1,8 +1,8 @@
->>> a = ["ant", "bat", "cat", 42]
->>> for i in range(len(a)):    # Not Pythonic
-...     print(a[i])
-...
-ant
-bat
-cat
-42
+>>> a = ["ant", "bat", "cat", "42"]
+['ant', 'bat', 'cat', '42']
+>>> "".join(a)                         # Join on empty space.
+'antbatcat42'
+>>> ", ".join(a)                       # Join on comma-space.
+'ant, bat, cat, 42'
+>>> " -- ".join(a)                     # Join on double dashes.
+'ant -- bat -- cat -- 42'

@@ -1,8 +1,2 @@
->>> print(soliloquy)   # Just a reminder of what the string is
-To be, or not to be, that is the question:
->>> soliloquy[0]
-'T'
->>> soliloquy[1]
-'o'
->>> soliloquy[2]
-' '
+>>> "   spacious   ".FILL_IN()
+'spacious'

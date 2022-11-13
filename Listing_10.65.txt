@@ -1,0 +1,2 @@
+(venv) $ pip install --upgrade palindrome_YOUR_USERNAME_HERE \
+> --index-url https://test.pypi.org/simple/

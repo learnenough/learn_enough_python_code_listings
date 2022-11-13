@@ -1,7 +1,8 @@
->>> for i, e in enumerate(a):    # Pythonic
-...     print(f"a[{i}] = {e}")
+>>> a = ["ant", "bat", "cat", 42]
+>>> for i in range(len(a)):    # Not Pythonic
+...     print(a[i])
 ...
-a[0] = ant
-a[1] = bat
-a[2] = cat
-a[3] = 42
+ant
+bat
+cat
+42
