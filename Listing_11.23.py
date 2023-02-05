@@ -1,7 +1,5 @@
-                        Model
-Score
-0.854749  Decision Tree
-0.854749  Random Forest
-0.787709  Logistic Regression
-0.770950  Naive Bayes
-0.743017  Perceptron
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import Perceptron
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
