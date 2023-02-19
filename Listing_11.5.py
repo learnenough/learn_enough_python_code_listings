@@ -1,8 +1,5 @@
->>> math.cos(angles)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: only size-1 arrays can be converted to Python scalars
->>> a = np.cos(angles)
->>> a
-array([ 1.0000000e+00,  6.1232340e-17, -1.0000000e+00, -1.8369702e-16,
-        1.0000000e+00])
+>>> np.arange(5)
+array([0, 1, 2, 3, 4])
+>>> angles = math.tau * np.arange(5) / 4
+>>> angles
+array([0.        , 1.57079633, 3.14159265, 4.71238898, 6.28318531])

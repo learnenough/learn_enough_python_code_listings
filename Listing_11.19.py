@@ -1,15 +1,9 @@
->>> titanic["Age"].notna()
-Name
-Braund, Mr. Owen Harris                                 True
-Cumings, Mrs. John Bradley (Florence Briggs Thayer)     True
-Heikkinen, Miss. Laina                                  True
-Futrelle, Mrs. Jacques Heath (Lily May Peel)            True
-Allen, Mr. William Henry                                True
-                                                       ...
-Montvila, Rev. Juozas                                   True
-Graham, Miss. Margaret Edith                            True
-Johnston, Miss. Catherine Helen "Carrie"               False
-Behr, Mr. Karl Howell                                   True
-Dooley, Mr. Patrick                                     True
-Name: Age, Length: 891, dtype: bool
->>> valid_ages = titanic[titanic["Age"].notna()]
+>>> titanic = pd.read_csv(URL, index_col="Name")
+>>> titanic.head()
+                                                    PassengerId  ...  Embarked
+Name                                                             ...
+Braund, Mr. Owen Harris                                       1  ...         S
+Cumings, Mrs. John Bradley (Florence Briggs Tha...            2  ...         C
+Heikkinen, Miss. Laina                                        3  ...         S
+Futrelle, Mrs. Jacques Heath (Lily May Peel)                  4  ...         S
+Allen, Mr. William Henry                                      5  ...         S

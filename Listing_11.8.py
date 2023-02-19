@@ -1,15 +1,31 @@
->>> from numpy.random import default_rng
->>> rng = default_rng()
->>> n_pts = 50
->>> x = rng.standard_normal(n_pts)
->>> x
-array([ 0.41256003,  0.67594205,  1.264653  ,  1.16351491, -0.41594407,
-       -0.60157015,  0.84889823, -0.59984223,  0.24374326,  0.06055498,
-       -0.48512829,  1.02253594, -1.10982933, -0.40609179,  0.55076245,
-        0.13046238,  0.86712869,  0.06139358, -2.26538163,  1.45785923,
-       -0.56220574, -1.38775239, -2.39643977, -0.77498392,  1.16794796,
-       -0.6588802 ,  1.66343434,  1.57475219, -0.03374501, -0.62757059,
-       -0.99378175,  0.69259747, -1.04555996,  0.62653116, -0.9042063 ,
-       -0.32565268, -0.99762804, -0.4270288 ,  0.69940045, -0.46574267,
-        1.82225132,  0.23925201, -1.0443741 , -0.54779683,  1.17466477,
-       -2.54906663, -0.31495622,  0.25224765, -1.20869217, -1.02737145])
+from math import tau
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.linspace(0, tau, 100)
+
+fig, ax = plt.subplots()
+
+ax.set_xticks([0, tau/4, tau/2, 3*tau/4, tau])
+ax.set_yticks([-1, -1/2, 0, 1/2, 1])
+plt.grid(True)
+
+ax.set_xticklabels([r"$0$", r"$\tau/4$", r"$\tau/2$", r"$3\tau/4$", r"$\tau$"])
+ax.set_yticklabels([r"$-1$", r"$-1/2$", r"$0$", r"$1/2$", r"$1$"])
+
+ax.set_title("One period of cosine and sine", fontsize=16)
+ax.set_xlabel(r"$\theta$", fontsize=16)
+ax.set_ylabel(r"$f(\theta)$", fontsize=16)
+
+ax.annotate(r"$\cos\theta$", xy=(1.75, -0.3), xytext=(0.5, -0.75),
+            arrowprops={"facecolor": "black", "width": 1}, fontsize=16)
+ax.annotate(r"$\sin\theta$", xy=(2.75, 0.5), xytext=(3.5, 0.75),
+            arrowprops={"facecolor": "black", "width": 1}, fontsize=16)
+
+fig.set_dpi(150)
+
+ax.plot(x, np.cos(x), color="red", linestyle="dashed")
+ax.plot(x, np.sin(x), color="blue", linestyle="dotted")
+plt.show()
